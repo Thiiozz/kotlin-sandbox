@@ -1,7 +1,6 @@
-package fizzbuzz
+package fr.thiiozz.fizzbuzz
 
 
-import fr.thiiozz.fizzbuzz.Fizzbuzz
 import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
