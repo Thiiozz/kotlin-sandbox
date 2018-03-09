@@ -7,15 +7,17 @@ import org.junit.platform.runner.JUnitPlatform
 import org.junit.runner.RunWith
 import kotlin.test.assertEquals
 
-//7701
-
 @RunWith(JUnitPlatform::class)
 class MonumentAggregatorTest : Spek({
     describe("A Monument aggregator") {
         val m = MonumentAggregator()
 
-        it("must count 2876 building") {
-            assertEquals(2876, m.findMonumentByType("Immeuble").size)
+        it("must count 376 monuments in Bordeaux city") {
+            assertEquals(376, m.findMonumentByCity("Bordeaux").size)
+        }
+
+        it("know than Bordeaux is the best city ever !"){
+            assertEquals(376,  m.groupByCityWithNumberOfMonuments()["bordeaux"])
         }
     }
 })
