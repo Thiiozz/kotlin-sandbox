@@ -15,6 +15,7 @@ import kotlin.test.assertNotEquals
 class DeckTest : Spek({
     describe("A card deck"){
         it("must have 52 cards"){
+            Deck.initialize()
             assertEquals(52, Deck.cards.size)
         }
 
@@ -27,6 +28,7 @@ class DeckTest : Spek({
         }
 
         it("can distribute cards"){
+
             val firstCard : Card =  Deck.distribute()
             val secondCard : Card = Deck.distribute()
 

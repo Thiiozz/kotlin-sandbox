@@ -1,19 +1,16 @@
 package fr.thiiozz.pokerhand.model.cards
 
-import java.util.*
-
 object Deck {
     var cards: MutableSet<Card> = HashSet()
 
     init {
-        println("Constructing a new deck !")
+        initialize()
+    }
+
+    fun initialize() {
+        cards = HashSet()
         fill()
-
-        println("Deck of ${cards.size} constructed")
         shuffle()
-
-        println("Shuffling cards")
-        println("Deck ready !")
     }
 
     private fun fill() {
